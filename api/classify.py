@@ -21,6 +21,7 @@ from sklearn.calibration import CalibratedClassifierCV
 my_file = Path("model.pkl")
 
 def classify(input):
+    
     if not my_file.exists():
 
         # Using SVM as classifier

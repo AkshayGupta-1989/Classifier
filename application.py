@@ -1,10 +1,13 @@
-import random
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, redirect
 from flasgger import Swagger
 from api.classify import classify
 
 application = app = Flask(__name__)
 Swagger(application)
+
+@app.route('/')
+def init():
+    return redirect('/apidocs')
 
 @app.route('/classify', methods=['GET'])
 def index():

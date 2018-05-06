@@ -49,7 +49,7 @@ def index():
         return "An error occurred, enter words", 500
     else:
         classification, confidence = classify(query)
-        result = 'class: '+str(classification)+', classification: '+str(confidence)
+        result = 'class: '+str(classification)+', confidence: '+str(confidence)
 
         accept = (request.headers.get('accept'))
 
